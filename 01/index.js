@@ -21,7 +21,7 @@ let moves = 0
 grid.forEach((col) => { // Dar la funcionalidad a cada ficha
   col.forEach((element) => {
     element.addEventListener('click', (e) => {
-      moves++;
+
       const element = e.target
       const x = element.attributes.getNamedItem('x').value
       const y = element.attributes.getNamedItem('y').value
@@ -40,6 +40,7 @@ grid.forEach((col) => { // Dar la funcionalidad a cada ficha
 
       currentColor = (currentColor == 'red') ? 'yellow' : 'red'
       toggleShadow();
+      moves++;
       if (moves >= 42) reset();
     })
   })
