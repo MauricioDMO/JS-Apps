@@ -1,0 +1,12 @@
+.social svg {
+  cursor: var(--pointer);
+  fill: var(--yellow);
+  width: 40px;
+  aspect-ratio: 1;
+  transition: fill .2s, transform .1s;
+
+  &:hover {
+    fill: var(--purple);
+    transform: scale(1.15);
+  }
+}

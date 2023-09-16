@@ -1,0 +1,74 @@
+.star-wars-tittle-container {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  height: 200px;
+  position: relative;
+  perspective: 250px;
+
+  & .title-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/titlebg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(1.2);
+    background-attachment: fixed;
+    opacity: .4;
+    perspective: 150px;
+
+    &::after {
+      content: '';
+      background-image: url('../media/star-wars.svg');
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: 150% 150%;
+      background-position: center center;
+      transform: rotateX(45deg);
+      opacity: .2;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & .star-wars-tittle {
+    z-index: 10;
+    color: var(--yellow);
+    font-size: 3em;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    transform: rotateX(45deg);
+  }
+
+  & .vader,
+  .stormtrooper {
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    aspect-ratio: 1;
+    animation: float ease-in-out 2s alternate infinite;
+  }
+
+  & .vader {
+    background-image: url('../media/vader.svg');
+    left: 10px;
+  }
+
+  & .stormtrooper {
+    background-image: url('../media/stormtrooper.svg');
+    right: 10px;
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-5px)
+  }
+
+  to {
+    transform: translateY(5px)
+  }
+}

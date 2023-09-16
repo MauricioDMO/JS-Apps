@@ -1,0 +1,78 @@
+.results-container {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.n-results {
+  margin: 0 0 16px 16px;
+  color: #fff;
+  font-weight: 500;
+  max-width: var(--max-width);
+  align-self: flex-start;
+}
+
+.main {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 16px;
+  max-width: var(--max-width);
+}
+
+.main-results {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.more-results {
+  box-sizing: border-box;
+  border: none;
+  width: 150px;
+  height: 30px;
+  margin: 10px 30px 30px;
+  position: relative;
+  background-color: var(--yellow);
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: var(--pointer);
+  transition: background-color .1s;
+
+  &:hover {
+    background-color: var(--dark-yellow);
+  }
+}
+
+.loader {
+  margin: auto;
+  margin-top: calc(auto - 10px);
+  padding: 10px;
+  width: 70px;
+  aspect-ratio: 1;
+  background-image: url('../media/jedi-logo.svg');
+  background-repeat: no-repeat;
+  background-size: calc(100% - 16px) calc(100% - 16px);
+  background-position: center;
+  animation: blink 1.5s infinite linear;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
