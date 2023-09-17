@@ -1,8 +1,11 @@
-# React + Vite
+# Star Wars API Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un cliente de la API de [Star Wars](https://swapi.dev).
+Se aplican diversos filtros para obtener una información mas clara.
 
-Currently, two official plugins are available:
+Para levantar el servidor local siga los siguientes comandos:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```console
+npm install
+npm run dev
+```
