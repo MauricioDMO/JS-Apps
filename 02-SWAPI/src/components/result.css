@@ -10,6 +10,11 @@
   transition: transform .1s;
   width: 100%;
 
+  background-image: var(--image);
+  background-size: auto 90%;
+  background-position: 90% center;
+  background-repeat: no-repeat;
+
   view-timeline: --result block;
   animation-timeline: --result;
   -webkit-animation-name: show;
